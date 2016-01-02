@@ -34,7 +34,7 @@ public class RalphBot extends PircBot{
         heist_online = false;
         this.log_id = log_id;
         create_log_file(this.log_id);
-        this.setName("TheUnbelivableRalph");
+        this.setName("AneleBot");
         _db = new CDatabase();
         try {
             _db.connectDB();
@@ -51,6 +51,7 @@ public class RalphBot extends PircBot{
     }
 
     public void onJoin(String channel, String sender, String login, String hostname){
+        this.sendMessage("ashwinitv","HeyGuys");
     }
 
     public void onMessage(String channel, String sender,String login, String hostname, String message){
