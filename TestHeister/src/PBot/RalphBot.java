@@ -20,24 +20,21 @@ public class RalphBot extends PircBot{
     private CDatabase _db;
     private final String twitch_server = "irc.twitch.tv";
     private final int twitch_port_number = 6667;
-    private final String id_token = "oauth:r8jh07tmft9f02crn2cga9f8w06mvo";
-    private final String[] command_list = {"#points","#startheist","#gimme"};
-    private int points;
+    private String id_token;
     private FileWriter log_writer;
     private BufferedWriter buffered_log_writer;
     private int log_id;
     private File log_file;
     private boolean quit=true;
     private boolean heist_online;
-    private String[] regular_fags = {"n1ghtsh0ck","figghter","BlitzGrabbedMyGf","drrudy","voodoohood"};
     private COnMessageHandler _onMessageHandler;
 
-    public RalphBot(int log_id){
+    public RalphBot(int log_id,String oath){
+        this.id_token = oath;
         heist_online = false;
         this.log_id = log_id;
         create_log_file(this.log_id);
         this.setName("TheUnbelivableRalph");
-        points = 0;
         _db = new CDatabase();
         try {
             _db.connectDB();
@@ -54,16 +51,6 @@ public class RalphBot extends PircBot{
     }
 
     public void onJoin(String channel, String sender, String login, String hostname){
-        if(isInRegulars(sender)){
-            this.sendMessage("#ashwinitv","sup "+sender+" OpieOP /");
-        } else if(!isPlayerListet(sender)){
-            try {
-                _db.insert(sender,0,0,0);
-                System.out.println("User: "+ sender +" added");
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        }
     }
 
     public void onMessage(String channel, String sender,String login, String hostname, String message){
@@ -110,16 +97,6 @@ public class RalphBot extends PircBot{
         }
     }
 
-    private boolean isInRegulars(String name){
-        boolean res=false;
-        for(int i=0;i<regular_fags.length;i++){
-            if(regular_fags[i].contains(name)){
-                res = true;
-                break;
-            }
-        }
-        return  res;
-    }
 
     public void heist(){
         if(heist_online){
