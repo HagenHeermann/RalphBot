@@ -11,10 +11,12 @@ import java.io.IOException;
 public class ConnectionSupervisorThread extends Thread {
     private RalphBot ralphBot;
     private volatile boolean active;
+    private int _craftWarResetCounter;
 
     public ConnectionSupervisorThread(RalphBot ralphBot){
         this.ralphBot = ralphBot;
         active = true;
+        _craftWarResetCounter = 0;
     }
     public void end_supervision(){
         active = false;
@@ -22,6 +24,12 @@ public class ConnectionSupervisorThread extends Thread {
 
     public void run(){
         while (ralphBot.quit()){
+            if(_craftWarResetCounter<60){
+                _craftWarResetCounter ++;
+            }else{
+                _craftWarResetCounter = 0;
+                ralphBot.craftWarClear();
+            }
             ralphBot.craftWarUpdate();
             System.out.println("Checking if ralph is still connected");
             if(!ralphBot.isConnected()){

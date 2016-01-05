@@ -2,6 +2,8 @@ package PBot;
 
 import java.sql.SQLException;
 import java.text.ParseException;
+import java.util.ArrayList;
+import java.util.HashMap;
 
 /**
  * Created by Hagen on 30.12.2015.
@@ -11,6 +13,8 @@ public class COnMessageHandler {
     private CDatabase _db;
     private RalphBot _bot;
     private CCraftWarComponent craftWar;
+    private HashMap<String,Integer> _playerAttackedPerH;
+    private ArrayList<String> _activePlayers;
 
     public COnMessageHandler(CDatabase _db,RalphBot _bot){
         this.craftWar = new CCraftWarComponent(_db);
@@ -89,34 +93,44 @@ public class COnMessageHandler {
                 e.printStackTrace();
             }
         }else if(message.contains("#buildUnits")){
-            try {
-                boolean regis = craftWar.userRegistered(sender);
-                if(regis){
-                    String[] splitMessage = message.split("\\s+");
-                    int val = Integer.parseInt(splitMessage[1]);
-                    res = craftWar.buildUnits(sender,val);
+            if(!message.contains("-")){
+                try {
+                    boolean regis = craftWar.userRegistered(sender);
+                    if(regis){
+                        String[] splitMessage = message.split("\\s+");
+                        int val = Integer.parseInt(splitMessage[1]);
+                        res = craftWar.buildUnits(sender,val);
+                    }
+                } catch (SQLException e) {
+                    e.printStackTrace();
                 }
-            } catch (SQLException e) {
-                e.printStackTrace();
+            }else{
+                res = "Lazy implementation OpieOP but NOP OMGScoots";
             }
+
         }else if(message.contains("#attack")){
-            String[] splitMessage = message.split("\\s+");
-            try {
-                res = craftWar.attack(sender,splitMessage[1]);
-            } catch (SQLException e) {
-                e.printStackTrace();
+            if(message.contains(sender)){
+                res = "You must be very special to attack yourself BrokeBack Kappa";
+            }
+            else{
+                String[] splitMessage = message.split("\\s+");
+                try {
+                    res = craftWar.newAttack(sender, splitMessage[1]);
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
         }else if(message.contains("#commands")){
             res = "# attack <User(Small letters)> | # buildUnits <Number> | # buildBarracks | # upgradeMine | # baseStats (no space Kappa ) Prices: 1xUnit = 100g , mine = minelevel * 100g, barracks = 200g ";
-        }else if(message.contains("#top10")){
-            String[]split = message.split("\\s+");
+        }else if(message.contains("#top10")) {
+            /*String[]split = message.split("\\s+");
             if(split[0].contains("#top10")){
                 try {
                     res = craftWar.top10();
                 } catch (SQLException e) {
                     e.printStackTrace();
                 }
-            }
+            }*/
         }
 
 
@@ -212,6 +226,10 @@ public class COnMessageHandler {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    public void craftWarClear(){
+        craftWar.clear();
     }
 
 }

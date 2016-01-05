@@ -51,7 +51,7 @@ public class RalphBot extends PircBot{
     }
 
     public void onJoin(String channel, String sender, String login, String hostname){
-        this.sendMessage("ashwinitv","HeyGuys");
+        //this.sendMessage("ashwinitv","HeyGuys");
     }
 
     public void onMessage(String channel, String sender,String login, String hostname, String message){
@@ -122,4 +122,6 @@ public class RalphBot extends PircBot{
     public boolean quit(){return quit;}
 
     public void craftWarUpdate(){_onMessageHandler.craftWarUpdate();}
+
+    public void craftWarClear(){_onMessageHandler.craftWarClear();}
 }

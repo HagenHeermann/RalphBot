@@ -27,7 +27,7 @@
         <entry file="file://$PROJECT_DIR$/src/PBot/RalphBot.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+              <caret line="125" column="66" selection-start-line="125" selection-start-column="66" selection-end-line="125" selection-end-column="66" />
               <folding>
                 <element signature="method#onMessage#0;class#RalphBot#0" expanded="false" />
                 <element signature="method#isPlayerListet#0;class#RalphBot#0" expanded="false" />
@@ -42,23 +42,25 @@
         <entry file="file://$PROJECT_DIR$/src/PBot/COnMessageHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+              <caret line="231" column="25" selection-start-line="231" selection-start-column="25" selection-end-line="231" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#addingToDbCall#0;class#COnMessageHandler#0" expanded="false" />
                 <element signature="method#heistEndedCase#0;class#COnMessageHandler#0" expanded="false" />
                 <element signature="method#statisticsCall#0;class#COnMessageHandler#0" expanded="false" />
                 <element signature="method#deleteCase#0;class#COnMessageHandler#0" expanded="false" />
+                <element signature="e#8783#8784#0" expanded="true" />
+                <element signature="e#8815#8816#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CCraftWarComponent.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CCraftWarComponent.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PBot/CCraftWarComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.66">
+              <caret line="339" column="10" selection-start-line="339" selection-start-column="10" selection-end-line="339" selection-end-column="10" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#updateValues#0;class#CCraftWarComponent#0" expanded="false" />
@@ -71,19 +73,8 @@
                 <element signature="method#userRegistered#0;class#CCraftWarComponent#0" expanded="false" />
                 <element signature="method#top10#0;class#CCraftWarComponent#0" expanded="false" />
                 <element signature="method#defenderAddedForces#0;class#CCraftWarComponent#0" expanded="false" />
+                <element signature="method#diceRoll#0;class#CCraftWarComponent#0" expanded="false" />
                 <element signature="method#attackerDefenderBalancing#0;class#CCraftWarComponent#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RalphBotMain.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/PBot/RalphBotMain.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.437018">
-              <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -93,95 +84,7 @@
         <entry file="file://$PROJECT_DIR$/src/PBot/ConnectionSupervisorThread.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-              <folding>
-                <element signature="method#ConnectionSupervisorThread#0;class#ConnectionSupervisorThread#0" expanded="false" />
-                <element signature="method#run#0;class#ConnectionSupervisorThread#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CStatisticsComponent.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PBot/CStatisticsComponent.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="93" column="60" selection-start-line="93" selection-start-column="60" selection-end-line="93" selection-end-column="60" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#singleHeist#0;class#CStatisticsComponent#0" expanded="false" />
-                <element signature="method#singleHeistFail#0;class#CStatisticsComponent#0" expanded="false" />
-                <element signature="method#multiHeist#0;class#CStatisticsComponent#0" expanded="false" />
-                <element signature="method#deltePlayer#0;class#CStatisticsComponent#0" expanded="false" />
-                <element signature="method#statistics#0;class#CStatisticsComponent#0" expanded="false" />
-                <element signature="method#isPlayerListet#0;class#CStatisticsComponent#0" expanded="false" />
-                <element signature="method#round#0;class#CStatisticsComponent#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CDatabase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PBot/CDatabase.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#connectDB#0;class#CDatabase#0" expanded="false" />
-                <element signature="method#createTable#0;class#CDatabase#0" expanded="false" />
-                <element signature="method#createTableCraftWar#0;class#CDatabase#0" expanded="false" />
-                <element signature="method#insert#0;class#CDatabase#0" expanded="false" />
-                <element signature="method#selectHEISTCOUNT#0;class#CDatabase#0" expanded="false" />
-                <element signature="method#selectWINS#0;class#CDatabase#0" expanded="false" />
-                <element signature="method#selectRIPS#0;class#CDatabase#0" expanded="false" />
-                <element signature="method#updateHEISTCOUNT#0;class#CDatabase#0" expanded="false" />
-                <element signature="method#updateWINS#0;class#CDatabase#0" expanded="false" />
-                <element signature="method#updateRIPS#0;class#CDatabase#0" expanded="false" />
-                <element signature="method#deletePlayer#0;class#CDatabase#0" expanded="false" />
-                <element signature="method#deletePlayerCraftWar#0;class#CDatabase#0" expanded="false" />
-                <element signature="method#dropCraftWar#0;class#CDatabase#0" expanded="false" />
-                <marker date="1451731826260" expanded="true" signature="995:1198" placeholder="CREATE TABLE..COMPANY..." />
-                <marker date="1451731826260" expanded="true" signature="1469:1703" placeholder="CREATE TABLE..CraftWar..." />
-                <marker date="1451731826260" expanded="true" signature="2188:2234" placeholder="INSERT INTO ..." />
-                <marker date="1451731826260" expanded="true" signature="2188:2237" placeholder="INSERT INTO ..." />
-                <marker date="1451731826260" expanded="true" signature="2188:2326" placeholder="INSERT INTO ..." />
-                <marker date="1451731826260" expanded="true" signature="2188:2327" placeholder="INSERT INTO ..." />
-                <marker date="1451731826260" expanded="true" signature="2255:2263" placeholder="VALUES (miss..." />
-                <marker date="1451731826260" expanded="true" signature="2255:2326" placeholder="VALUES (miss..." />
-                <marker date="1451731826260" expanded="true" signature="2784:2810" placeholder="SELECT USERN..USERS..." />
-                <marker date="1451731826260" expanded="true" signature="3427:3467" placeholder="SELECT COUNT..USERS..." />
-                <marker date="1451731826260" expanded="true" signature="3427:3485" placeholder="SELECT COUNT..USERS..." />
-                <marker date="1451731826260" expanded="true" signature="4008:4046" placeholder="SELECT WINS ..USERS..." />
-                <marker date="1451731826260" expanded="true" signature="4008:4064" placeholder="SELECT WINS ..USERS..." />
-                <marker date="1451731826260" expanded="true" signature="4601:4658" placeholder="SELECT RIPS ..USERS..." />
-                <marker date="1451731826260" expanded="true" signature="5157:5225" placeholder="UPDATE USERS..." />
-                <marker date="1451731826260" expanded="true" signature="5642:5708" placeholder="UPDATE USERS..." />
-                <marker date="1451731826260" expanded="true" signature="6134:6200" placeholder="UPDATE USERS..." />
-                <marker date="1451731826260" expanded="true" signature="6579:6630" placeholder="DELETE from ..." />
-                <marker date="1451731826260" expanded="true" signature="7031:7137" placeholder="INSERT INTO ..." />
-                <marker date="1451731826260" expanded="true" signature="7583:7604" placeholder="SELECT USERN..USERS..." />
-                <marker date="1451731826260" expanded="true" signature="7583:7612" placeholder="SELECT USERN..CraftWar..." />
-                <marker date="1451731826260" expanded="true" signature="8223:8297" placeholder="SELECT GOLD ..CraftWar..." />
-                <marker date="1451731826260" expanded="true" signature="8826:8904" placeholder="SELECT BARRA..CraftWar..." />
-                <marker date="1451731826260" expanded="true" signature="9425:9499" placeholder="SELECT MINE ..CraftWar..." />
-                <marker date="1451731826260" expanded="true" signature="10034:10108" placeholder="SELECT UNITS..CraftWar..." />
-                <marker date="1451731826260" expanded="true" signature="10601:10684" placeholder="UPDATE Craft..." />
-                <marker date="1451731826260" expanded="true" signature="11109:11196" placeholder="UPDATE Craft..." />
-                <marker date="1451731826260" expanded="true" signature="11612:11695" placeholder="UPDATE Craft..." />
-                <marker date="1451731826260" expanded="true" signature="12113:12197" placeholder="UPDATE Craft..." />
-                <marker date="1451731826260" expanded="true" signature="12580:12634" placeholder="DELETE from ..." />
-                <marker date="1451731826260" expanded="true" signature="12879:12898" placeholder="DROP TABLE C..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CraftWartMainTest.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PBot/CraftWartMainTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
+              <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -212,14 +115,14 @@
         <option value="$PROJECT_DIR$/src/RalphBot.java" />
         <option value="$PROJECT_DIR$/src/PBot/quicktest.java" />
         <option value="$PROJECT_DIR$/src/PBot/CStatisticsModel.java" />
-        <option value="$PROJECT_DIR$/src/PBot/ConnectionSupervisorThread.java" />
         <option value="$PROJECT_DIR$/src/PBot/CStatisticsComponent.java" />
         <option value="$PROJECT_DIR$/src/PBot/CDatabase.java" />
-        <option value="$PROJECT_DIR$/src/PBot/COnMessageHandler.java" />
-        <option value="$PROJECT_DIR$/src/PBot/CCraftWarComponent.java" />
-        <option value="$PROJECT_DIR$/src/PBot/CraftWartMainTest.java" />
-        <option value="$PROJECT_DIR$/src/PBot/RalphBot.java" />
         <option value="$PROJECT_DIR$/src/PBot/RalphBotMain.java" />
+        <option value="$PROJECT_DIR$/src/PBot/CraftWartMainTest.java" />
+        <option value="$PROJECT_DIR$/src/PBot/COnMessageHandler.java" />
+        <option value="$PROJECT_DIR$/src/PBot/RalphBot.java" />
+        <option value="$PROJECT_DIR$/src/PBot/ConnectionSupervisorThread.java" />
+        <option value="$PROJECT_DIR$/src/PBot/CCraftWarComponent.java" />
       </list>
     </option>
   </component>
@@ -258,6 +161,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -332,9 +236,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -352,7 +255,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Hagen/Desktop/ChatBot/TestHeister/src/PBot/RalphBotMain.java" />
     <property name="extract.method.default.visibility" value="private" />
   </component>
-  <component name="RunManager" selected="Application.RalphBotMain">
+  <component name="RunManager" selected="Application.CraftWartMainTest">
     <configuration default="false" name="testMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="testMain" />
@@ -751,15 +654,18 @@
       <workItem from="1451726476890" duration="9811000" />
       <workItem from="1451741209670" duration="9000" />
       <workItem from="1451742425859" duration="289000" />
-      <workItem from="1451743094770" duration="4908000" />
+      <workItem from="1451743094770" duration="8120000" />
+      <workItem from="1451824676271" duration="1834000" />
+      <workItem from="1451835209538" duration="3682000" />
+      <workItem from="1451856764978" duration="13282000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="172366000" />
+    <option name="totallyTimeSpent" value="194376000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="0" width="1370" height="772" extended-state="0" />
+    <frame x="-8" y="0" width="1370" height="772" extended-state="1" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -769,7 +675,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37104073" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3861237" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39364845" sideWeight="0.5" order="0" side_tool="true" content_ui="combo" />
@@ -857,6 +763,8 @@
             <element signature="method#heistEndedCase#0;class#COnMessageHandler#0" expanded="false" />
             <element signature="method#statisticsCall#0;class#COnMessageHandler#0" expanded="false" />
             <element signature="method#deleteCase#0;class#COnMessageHandler#0" expanded="false" />
+            <element signature="e#8783#8784#0" expanded="true" />
+            <element signature="e#8815#8816#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -877,6 +785,7 @@
             <element signature="method#userRegistered#0;class#CCraftWarComponent#0" expanded="false" />
             <element signature="method#top10#0;class#CCraftWarComponent#0" expanded="false" />
             <element signature="method#defenderAddedForces#0;class#CCraftWarComponent#0" expanded="false" />
+            <element signature="method#diceRoll#0;class#CCraftWarComponent#0" expanded="false" />
             <element signature="method#attackerDefenderBalancing#0;class#CCraftWarComponent#0" expanded="false" />
           </folding>
         </state>
@@ -929,37 +838,37 @@
             <element signature="method#deletePlayer#0;class#CDatabase#0" expanded="false" />
             <element signature="method#deletePlayerCraftWar#0;class#CDatabase#0" expanded="false" />
             <element signature="method#dropCraftWar#0;class#CDatabase#0" expanded="false" />
-            <marker date="1451731826260" expanded="true" signature="995:1198" placeholder="CREATE TABLE..COMPANY..." />
-            <marker date="1451731826260" expanded="true" signature="1469:1703" placeholder="CREATE TABLE..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="2188:2234" placeholder="INSERT INTO ..." />
-            <marker date="1451731826260" expanded="true" signature="2188:2237" placeholder="INSERT INTO ..." />
-            <marker date="1451731826260" expanded="true" signature="2188:2326" placeholder="INSERT INTO ..." />
-            <marker date="1451731826260" expanded="true" signature="2188:2327" placeholder="INSERT INTO ..." />
-            <marker date="1451731826260" expanded="true" signature="2255:2263" placeholder="VALUES (miss..." />
-            <marker date="1451731826260" expanded="true" signature="2255:2326" placeholder="VALUES (miss..." />
-            <marker date="1451731826260" expanded="true" signature="2784:2810" placeholder="SELECT USERN..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="3427:3467" placeholder="SELECT COUNT..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="3427:3485" placeholder="SELECT COUNT..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="4008:4046" placeholder="SELECT WINS ..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="4008:4064" placeholder="SELECT WINS ..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="4601:4658" placeholder="SELECT RIPS ..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="5157:5225" placeholder="UPDATE USERS..." />
-            <marker date="1451731826260" expanded="true" signature="5642:5708" placeholder="UPDATE USERS..." />
-            <marker date="1451731826260" expanded="true" signature="6134:6200" placeholder="UPDATE USERS..." />
-            <marker date="1451731826260" expanded="true" signature="6579:6630" placeholder="DELETE from ..." />
-            <marker date="1451731826260" expanded="true" signature="7031:7137" placeholder="INSERT INTO ..." />
-            <marker date="1451731826260" expanded="true" signature="7583:7604" placeholder="SELECT USERN..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="7583:7612" placeholder="SELECT USERN..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="8223:8297" placeholder="SELECT GOLD ..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="8826:8904" placeholder="SELECT BARRA..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="9425:9499" placeholder="SELECT MINE ..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="10034:10108" placeholder="SELECT UNITS..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="10601:10684" placeholder="UPDATE Craft..." />
-            <marker date="1451731826260" expanded="true" signature="11109:11196" placeholder="UPDATE Craft..." />
-            <marker date="1451731826260" expanded="true" signature="11612:11695" placeholder="UPDATE Craft..." />
-            <marker date="1451731826260" expanded="true" signature="12113:12197" placeholder="UPDATE Craft..." />
-            <marker date="1451731826260" expanded="true" signature="12580:12634" placeholder="DELETE from ..." />
-            <marker date="1451731826260" expanded="true" signature="12879:12898" placeholder="DROP TABLE C..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..COMPANY..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="VALUES (miss..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="VALUES (miss..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT USERN..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT WINS ..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT WINS ..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT RIPS ..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="DELETE from ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT USERN..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT USERN..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT GOLD ..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT BARRA..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT MINE ..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT UNITS..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE Craft..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE Craft..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE Craft..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE Craft..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="DELETE from ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="DROP TABLE C..." />
           </folding>
         </state>
       </provider>
@@ -995,6 +904,8 @@
             <element signature="method#heistEndedCase#0;class#COnMessageHandler#0" expanded="false" />
             <element signature="method#statisticsCall#0;class#COnMessageHandler#0" expanded="false" />
             <element signature="method#deleteCase#0;class#COnMessageHandler#0" expanded="false" />
+            <element signature="e#8783#8784#0" expanded="true" />
+            <element signature="e#8815#8816#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1015,6 +926,7 @@
             <element signature="method#userRegistered#0;class#CCraftWarComponent#0" expanded="false" />
             <element signature="method#top10#0;class#CCraftWarComponent#0" expanded="false" />
             <element signature="method#defenderAddedForces#0;class#CCraftWarComponent#0" expanded="false" />
+            <element signature="method#diceRoll#0;class#CCraftWarComponent#0" expanded="false" />
             <element signature="method#attackerDefenderBalancing#0;class#CCraftWarComponent#0" expanded="false" />
           </folding>
         </state>
@@ -1067,37 +979,37 @@
             <element signature="method#deletePlayer#0;class#CDatabase#0" expanded="false" />
             <element signature="method#deletePlayerCraftWar#0;class#CDatabase#0" expanded="false" />
             <element signature="method#dropCraftWar#0;class#CDatabase#0" expanded="false" />
-            <marker date="1451731826260" expanded="true" signature="995:1198" placeholder="CREATE TABLE..COMPANY..." />
-            <marker date="1451731826260" expanded="true" signature="1469:1703" placeholder="CREATE TABLE..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="2188:2234" placeholder="INSERT INTO ..." />
-            <marker date="1451731826260" expanded="true" signature="2188:2237" placeholder="INSERT INTO ..." />
-            <marker date="1451731826260" expanded="true" signature="2188:2326" placeholder="INSERT INTO ..." />
-            <marker date="1451731826260" expanded="true" signature="2188:2327" placeholder="INSERT INTO ..." />
-            <marker date="1451731826260" expanded="true" signature="2255:2263" placeholder="VALUES (miss..." />
-            <marker date="1451731826260" expanded="true" signature="2255:2326" placeholder="VALUES (miss..." />
-            <marker date="1451731826260" expanded="true" signature="2784:2810" placeholder="SELECT USERN..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="3427:3467" placeholder="SELECT COUNT..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="3427:3485" placeholder="SELECT COUNT..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="4008:4046" placeholder="SELECT WINS ..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="4008:4064" placeholder="SELECT WINS ..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="4601:4658" placeholder="SELECT RIPS ..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="5157:5225" placeholder="UPDATE USERS..." />
-            <marker date="1451731826260" expanded="true" signature="5642:5708" placeholder="UPDATE USERS..." />
-            <marker date="1451731826260" expanded="true" signature="6134:6200" placeholder="UPDATE USERS..." />
-            <marker date="1451731826260" expanded="true" signature="6579:6630" placeholder="DELETE from ..." />
-            <marker date="1451731826260" expanded="true" signature="7031:7137" placeholder="INSERT INTO ..." />
-            <marker date="1451731826260" expanded="true" signature="7583:7604" placeholder="SELECT USERN..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="7583:7612" placeholder="SELECT USERN..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="8223:8297" placeholder="SELECT GOLD ..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="8826:8904" placeholder="SELECT BARRA..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="9425:9499" placeholder="SELECT MINE ..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="10034:10108" placeholder="SELECT UNITS..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="10601:10684" placeholder="UPDATE Craft..." />
-            <marker date="1451731826260" expanded="true" signature="11109:11196" placeholder="UPDATE Craft..." />
-            <marker date="1451731826260" expanded="true" signature="11612:11695" placeholder="UPDATE Craft..." />
-            <marker date="1451731826260" expanded="true" signature="12113:12197" placeholder="UPDATE Craft..." />
-            <marker date="1451731826260" expanded="true" signature="12580:12634" placeholder="DELETE from ..." />
-            <marker date="1451731826260" expanded="true" signature="12879:12898" placeholder="DROP TABLE C..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..COMPANY..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="VALUES (miss..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="VALUES (miss..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT USERN..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT WINS ..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT WINS ..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT RIPS ..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="DELETE from ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT USERN..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT USERN..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT GOLD ..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT BARRA..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT MINE ..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT UNITS..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE Craft..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE Craft..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE Craft..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE Craft..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="DELETE from ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="DROP TABLE C..." />
           </folding>
         </state>
       </provider>
@@ -1368,24 +1280,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.206897">
           <caret line="1451" column="20" selection-start-line="1451" selection-start-column="16" selection-end-line="1451" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PBot/CStatisticsComponent.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="93" column="60" selection-start-line="93" selection-start-column="60" selection-end-line="93" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#singleHeist#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#singleHeistFail#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#multiHeist#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#deltePlayer#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#statistics#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#isPlayerListet#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#round#0;class#CStatisticsComponent#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1408,56 +1302,64 @@
             <element signature="method#deletePlayer#0;class#CDatabase#0" expanded="false" />
             <element signature="method#deletePlayerCraftWar#0;class#CDatabase#0" expanded="false" />
             <element signature="method#dropCraftWar#0;class#CDatabase#0" expanded="false" />
-            <marker date="1451731826260" expanded="true" signature="995:1198" placeholder="CREATE TABLE..COMPANY..." />
-            <marker date="1451731826260" expanded="true" signature="1469:1703" placeholder="CREATE TABLE..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="2188:2234" placeholder="INSERT INTO ..." />
-            <marker date="1451731826260" expanded="true" signature="2188:2237" placeholder="INSERT INTO ..." />
-            <marker date="1451731826260" expanded="true" signature="2188:2326" placeholder="INSERT INTO ..." />
-            <marker date="1451731826260" expanded="true" signature="2188:2327" placeholder="INSERT INTO ..." />
-            <marker date="1451731826260" expanded="true" signature="2255:2263" placeholder="VALUES (miss..." />
-            <marker date="1451731826260" expanded="true" signature="2255:2326" placeholder="VALUES (miss..." />
-            <marker date="1451731826260" expanded="true" signature="2784:2810" placeholder="SELECT USERN..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="3427:3467" placeholder="SELECT COUNT..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="3427:3485" placeholder="SELECT COUNT..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="4008:4046" placeholder="SELECT WINS ..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="4008:4064" placeholder="SELECT WINS ..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="4601:4658" placeholder="SELECT RIPS ..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="5157:5225" placeholder="UPDATE USERS..." />
-            <marker date="1451731826260" expanded="true" signature="5642:5708" placeholder="UPDATE USERS..." />
-            <marker date="1451731826260" expanded="true" signature="6134:6200" placeholder="UPDATE USERS..." />
-            <marker date="1451731826260" expanded="true" signature="6579:6630" placeholder="DELETE from ..." />
-            <marker date="1451731826260" expanded="true" signature="7031:7137" placeholder="INSERT INTO ..." />
-            <marker date="1451731826260" expanded="true" signature="7583:7604" placeholder="SELECT USERN..USERS..." />
-            <marker date="1451731826260" expanded="true" signature="7583:7612" placeholder="SELECT USERN..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="8223:8297" placeholder="SELECT GOLD ..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="8826:8904" placeholder="SELECT BARRA..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="9425:9499" placeholder="SELECT MINE ..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="10034:10108" placeholder="SELECT UNITS..CraftWar..." />
-            <marker date="1451731826260" expanded="true" signature="10601:10684" placeholder="UPDATE Craft..." />
-            <marker date="1451731826260" expanded="true" signature="11109:11196" placeholder="UPDATE Craft..." />
-            <marker date="1451731826260" expanded="true" signature="11612:11695" placeholder="UPDATE Craft..." />
-            <marker date="1451731826260" expanded="true" signature="12113:12197" placeholder="UPDATE Craft..." />
-            <marker date="1451731826260" expanded="true" signature="12580:12634" placeholder="DELETE from ..." />
-            <marker date="1451731826260" expanded="true" signature="12879:12898" placeholder="DROP TABLE C..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..COMPANY..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="CREATE TABLE..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="VALUES (miss..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="VALUES (miss..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT USERN..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT WINS ..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT WINS ..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT RIPS ..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="DELETE from ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="INSERT INTO ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT USERN..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT USERN..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT GOLD ..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT BARRA..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT MINE ..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="SELECT UNITS..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE Craft..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE Craft..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE Craft..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="UPDATE Craft..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="DELETE from ..." />
+            <marker date="1451731826260" expanded="true" signature="-1:-1" placeholder="DROP TABLE C..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PBot/CraftWartMainTest.java">
+    <entry file="file://$PROJECT_DIR$/src/PBot/RalphBotMain.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding />
+          <caret line="17" column="3" selection-start-line="17" selection-start-column="3" selection-end-line="17" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PBot/ConnectionSupervisorThread.java">
+    <entry file="file://$PROJECT_DIR$/src/PBot/CStatisticsComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
+          <caret line="93" column="60" selection-start-line="93" selection-start-column="60" selection-end-line="93" selection-end-column="60" />
           <folding>
-            <element signature="method#ConnectionSupervisorThread#0;class#ConnectionSupervisorThread#0" expanded="false" />
-            <element signature="method#run#0;class#ConnectionSupervisorThread#0" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#singleHeist#0;class#CStatisticsComponent#0" expanded="false" />
+            <element signature="method#singleHeistFail#0;class#CStatisticsComponent#0" expanded="false" />
+            <element signature="method#multiHeist#0;class#CStatisticsComponent#0" expanded="false" />
+            <element signature="method#deltePlayer#0;class#CStatisticsComponent#0" expanded="false" />
+            <element signature="method#statistics#0;class#CStatisticsComponent#0" expanded="false" />
+            <element signature="method#isPlayerListet#0;class#CStatisticsComponent#0" expanded="false" />
+            <element signature="method#round#0;class#CStatisticsComponent#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1465,21 +1367,52 @@
     <entry file="file://$PROJECT_DIR$/src/PBot/COnMessageHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+          <caret line="231" column="25" selection-start-line="231" selection-start-column="25" selection-end-line="231" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#addingToDbCall#0;class#COnMessageHandler#0" expanded="false" />
             <element signature="method#heistEndedCase#0;class#COnMessageHandler#0" expanded="false" />
             <element signature="method#statisticsCall#0;class#COnMessageHandler#0" expanded="false" />
             <element signature="method#deleteCase#0;class#COnMessageHandler#0" expanded="false" />
+            <element signature="e#8783#8784#0" expanded="true" />
+            <element signature="e#8815#8816#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PBot/RalphBot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="125" column="66" selection-start-line="125" selection-start-column="66" selection-end-line="125" selection-end-column="66" />
+          <folding>
+            <element signature="method#onMessage#0;class#RalphBot#0" expanded="false" />
+            <element signature="method#isPlayerListet#0;class#RalphBot#0" expanded="false" />
+            <element signature="method#create_log_file#0;class#RalphBot#0" expanded="false" />
+            <element signature="method#heist#0;class#RalphBot#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PBot/CraftWartMainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50898206">
+          <caret line="15" column="18" selection-start-line="15" selection-start-column="18" selection-end-line="15" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PBot/ConnectionSupervisorThread.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="30" column="41" selection-start-line="30" selection-start-column="41" selection-end-line="30" selection-end-column="41" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PBot/CCraftWarComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="128" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.66">
+          <caret line="339" column="10" selection-start-line="339" selection-start-column="10" selection-end-line="339" selection-end-column="10" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#updateValues#0;class#CCraftWarComponent#0" expanded="false" />
@@ -1492,30 +1425,8 @@
             <element signature="method#userRegistered#0;class#CCraftWarComponent#0" expanded="false" />
             <element signature="method#top10#0;class#CCraftWarComponent#0" expanded="false" />
             <element signature="method#defenderAddedForces#0;class#CCraftWarComponent#0" expanded="false" />
+            <element signature="method#diceRoll#0;class#CCraftWarComponent#0" expanded="false" />
             <element signature="method#attackerDefenderBalancing#0;class#CCraftWarComponent#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PBot/RalphBot.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-          <folding>
-            <element signature="method#onMessage#0;class#RalphBot#0" expanded="false" />
-            <element signature="method#isPlayerListet#0;class#RalphBot#0" expanded="false" />
-            <element signature="method#create_log_file#0;class#RalphBot#0" expanded="false" />
-            <element signature="method#heist#0;class#RalphBot#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PBot/RalphBotMain.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.437018">
-          <caret line="48" column="17" selection-start-line="48" selection-start-column="17" selection-end-line="48" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>

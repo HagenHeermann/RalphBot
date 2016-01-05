@@ -12,8 +12,9 @@ public class CraftWartMainTest {
 
         try {
             base.connectDB();
-            String values = comp.getBaseStats("perfectionx6");
-            System.out.println(values);
+            for(int i=0;i<100;i++){
+                //System.out.println(comp.diceRoll());
+            }
 
 
 

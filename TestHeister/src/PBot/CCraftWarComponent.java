@@ -25,9 +25,14 @@ public class CCraftWarComponent {
     private final int mineBaseCost = 100;
     private final int unitCost = 100;
     private final int barracksCost = 200;
+    private HashMap<String,Integer> _playerAttackedPerH;
+    private ArrayList<String> _activePlayers;
+
 
     public CCraftWarComponent(CDatabase base){
         this._base = base;
+        this._activePlayers = new ArrayList<>();
+        this._playerAttackedPerH = new HashMap<>();
     }
 
     public void updateValues() throws SQLException {
@@ -103,29 +108,36 @@ public class CCraftWarComponent {
 
     public String buildUnits(String username,int count) throws SQLException {
         String res;
-        if(_base.selectBarracksCraftWar(username)>=1){
-            if(userRegistered(username)){
-                int usersGold = _base.selectGoldCraftWar(username);
-                int usersUnits = _base.selectUnitsCraftWar(username);
-                if(usersGold>= count*100){
-                    _base.updateUnitsCraftWar(username,usersUnits+count);
-                    int gold = _base.selectGoldCraftWar(username);
-                    _base.updateGoldCraftWar(username,gold-(100*count));
-                    res = "You now have "+(usersUnits+count)+" Units "+username;
+        if(count<1000){
+            if(_base.selectBarracksCraftWar(username)>=1){
+                if(userRegistered(username)){
+                    int usersGold = _base.selectGoldCraftWar(username);
+                    int usersUnits = _base.selectUnitsCraftWar(username);
+                    if(usersGold>= count*100){
+                        _base.updateUnitsCraftWar(username,usersUnits+count);
+                        int gold = _base.selectGoldCraftWar(username);
+                        _base.updateGoldCraftWar(username,gold-(100*count));
+                        res = "You now have "+(usersUnits+count)+" Units "+username;
+                    }
+                    else{
+                        res = "You dont have enough gold to build those units "+username;
+                    }
+                }else{
+                    res = "Player isnt registered";
                 }
-                else{
-                    res = "You dont have enough gold to build those units "+username;
-                }
-            }else{
-                res = "Player isnt registered";
             }
+            else{
+                res = "No Barracks in this base";
+            }
+        }else{
+            res = "Sry no more than 1000 Units at a time";
         }
-        else{
-            res = "No Barracks in this base";
-        }
+
         return res;
     }
 
+    //DEPRICATED
+    //________________________________________________________________________________
     public String attack(String attacker,String defender) throws SQLException {
         String res;
         if(userRegistered(attacker)){
@@ -161,6 +173,63 @@ public class CCraftWarComponent {
         else{
             res ="Attacker isnt registered";
         }
+        return res;
+    }
+    //________________________________________________________________________________
+
+
+    public String newAttack(String attacker,String defender)throws SQLException{
+        String res;
+        addPlayerToActive(attacker);
+        addPlayerToActive(defender);
+        if(_playerAttackedPerH.get(defender)<4){
+            if(userRegistered(attacker)&&userRegistered(defender)){
+                int attackerUnits = _base.selectUnitsCraftWar(attacker);
+                int attackerDices=1;
+                int defenderUnits = _base.selectUnitsCraftWar(defender);
+                int defenderDices=1;
+
+                if(attackerUnits>100){
+                    attackerDices = attackerUnits / 100;
+                }
+                if(defenderUnits>100){
+                    defenderDices = defenderUnits / 100;
+                }
+
+                int rolledAttackerValue = 0;
+                int rolledDefenderValue = 0;
+
+                for(int i=0;i<attackerDices;i++ ){
+                    rolledAttackerValue = rolledAttackerValue + diceRoll();
+                }
+                for(int i=0;i<defenderDices;i++){
+                    rolledDefenderValue = rolledDefenderValue + diceRoll();
+                }
+
+                if(rolledAttackerValue>rolledDefenderValue){
+                    _base.updateUnitsCraftWar(defender,defenderUnits/2);
+                    int goldDefender = _base.selectGoldCraftWar(defender);
+                    int goldAttacker = _base.selectGoldCraftWar(attacker);
+                    _base.updateGoldCraftWar(defender,3*(goldDefender/4));
+                    _base.updateGoldCraftWar(attacker,goldAttacker+goldDefender/4);
+                    res = "The attacker "+attacker+"(roll "+rolledAttackerValue+") won and destroyed half of the defenders "+defender+"(rolled "+rolledDefenderValue+") army,looting "+ goldDefender/4 +" gold";
+                    incrementAttackedCounter(defender);
+                }else{
+                    _base.updateUnitsCraftWar(attacker,attackerUnits/2);
+                    res = "The Defender "+defender+"(roll "+rolledDefenderValue+")won and slaughtered the attackers "+attacker+"(roll "+rolledAttackerValue+") army";
+                }
+            }
+            else{
+                res = "either attack or defender isn't registered";
+            }
+        }
+        else{
+            res = "Defender was attacked 4 times already this hour";
+        }
+
+
+
+
         return res;
     }
 
@@ -208,7 +277,7 @@ public class CCraftWarComponent {
 
 
         return res;
-    }
+    } //TODO
 
     private double defenderAddedForces(){
         Random random = new Random();
@@ -217,8 +286,46 @@ public class CCraftWarComponent {
         return minRange + (maxRange - minRange) * random.nextDouble();
     }
 
+    private int diceRoll(){
+        Random numberGenerator = new Random();
+        int res;
+        int range = 6;
+        long fraction = (long)(range * numberGenerator.nextDouble());
+        res = (int)(fraction+1);
+        return res;
+    }
     //CHECKUP SECTION
 
+    private void addPlayerToActive(String username){
+        if(!alreadyInList(username)){
+            _activePlayers.add(username);
+        }
+        if(!alreadyInMap(username)){
+            _playerAttackedPerH.put(username,0);
+        }
+    }
+
+    private boolean alreadyInMap(String username){
+        boolean res = _playerAttackedPerH.containsKey(username);
+        return res;
+    }
+
+    private void incrementAttackedCounter(String username){
+        if(alreadyInMap(username)){
+            int oldNum = _playerAttackedPerH.get(username);
+            _playerAttackedPerH.replace(username,oldNum,oldNum+1);
+        }
+    }
+
+    private boolean alreadyInList(String username){
+        boolean res = _activePlayers.contains(username);
+        return res;
+    }
+
+    public void clear(){
+        this._playerAttackedPerH = new HashMap<>();
+        this._activePlayers = new ArrayList<>();
+    }
     private boolean attackerDefenderBalancing(String attacker,String defender) throws SQLException {
         boolean res;
         int attackersArmy = _base.selectUnitsCraftWar(attacker);
@@ -230,4 +337,5 @@ public class CCraftWarComponent {
         }
         return res;
     }
+// BBBBBBB
 }
