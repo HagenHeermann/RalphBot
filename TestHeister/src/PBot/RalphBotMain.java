@@ -29,6 +29,8 @@ public class RalphBotMain extends Application{
     public void start(Stage primaryStage) throws Exception {
         primaryStage.setTitle("Ralph");
         Label tokenLabel = new Label("Token: ");
+        Label channelName = new Label("Channel Name: ");
+        TextField textChannelTextField = new TextField();
         TextField textField = new TextField();
         Button btn = new Button();
         btn.setText("submit");
@@ -36,7 +38,8 @@ public class RalphBotMain extends Application{
             @Override
             public void handle(ActionEvent event) {
                 String token = textField.getText();
-                RalphBot bot = new RalphBot(0,token);
+                String channelName = textChannelTextField.getText();
+                RalphBot bot = new RalphBot(0,token,channelName);
                 ConnectionSupervisorThread supervisorThread = new ConnectionSupervisorThread(bot);
                 bot.setVerbose(true);
                 try {
@@ -51,7 +54,7 @@ public class RalphBotMain extends Application{
         });
 
         HBox box = new HBox();
-        box.getChildren().addAll(tokenLabel,textField,btn);
+        box.getChildren().addAll(tokenLabel,textField,channelName,textChannelTextField,btn);
         box.setSpacing(10);
         primaryStage.setScene(new Scene(box,500,100));
         primaryStage.show();

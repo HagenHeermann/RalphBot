@@ -15,8 +15,10 @@ public class COnMessageHandler {
     private CCraftWarComponent craftWar;
     private HashMap<String,Integer> _playerAttackedPerH;
     private ArrayList<String> _activePlayers;
+    private String _channelName;
 
-    public COnMessageHandler(CDatabase _db,RalphBot _bot){
+    public COnMessageHandler(CDatabase _db,RalphBot _bot,String _channelName){
+        this._channelName = _channelName;
         this.craftWar = new CCraftWarComponent(_db);
         this._db = _db;
         this._bot = _bot;
@@ -121,7 +123,7 @@ public class COnMessageHandler {
                 }
             }
         }else if(message.contains("#commands")){
-            res = "# attack <User(Small letters)> | # buildUnits <Number> | # buildBarracks | # upgradeMine | # baseStats (no space Kappa ) Prices: 1xUnit = 100g , mine = minelevel * 100g, barracks = 200g ";
+            res = "# attack <User(Small letters)> | # buildUnits <Number> | # buildBarracks | # upgradeMine | # baseStats | # donate <user> <amount> (no space Kappa ) Prices: 1xUnit = 100g , mine = minelevel * 100g, barracks = 200g ";
         }else if(message.contains("#top10")) {
             /*String[]split = message.split("\\s+");
             if(split[0].contains("#top10")){
@@ -131,6 +133,25 @@ public class COnMessageHandler {
                     e.printStackTrace();
                 }
             }*/
+        }else if(message.contains("#donate")){
+            if(!message.contains("-")){
+                String[] splitMessage = message.split("\\s+");
+                if(splitMessage.length>=3){
+                    int val = Integer.parseInt(splitMessage[2]);
+                    try {
+                        res = craftWar.giveGold(sender,splitMessage[1],val);
+                    } catch (SQLException e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            }else if(message.contains("#reset")&&sender=="voodoohood"){
+                try {
+                    res = craftWar.reset();
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
+            }
         }
 
 

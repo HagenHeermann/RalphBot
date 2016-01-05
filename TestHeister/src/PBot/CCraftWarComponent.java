@@ -207,12 +207,11 @@ public class CCraftWarComponent {
                 }
 
                 if(rolledAttackerValue>rolledDefenderValue){
-                    _base.updateUnitsCraftWar(defender,defenderUnits/2);
                     int goldDefender = _base.selectGoldCraftWar(defender);
                     int goldAttacker = _base.selectGoldCraftWar(attacker);
                     _base.updateGoldCraftWar(defender,3*(goldDefender/4));
                     _base.updateGoldCraftWar(attacker,goldAttacker+goldDefender/4);
-                    res = "The attacker "+attacker+"(roll "+rolledAttackerValue+") won and destroyed half of the defenders "+defender+"(rolled "+rolledDefenderValue+") army,looting "+ goldDefender/4 +" gold";
+                    res = "The attacker "+attacker+"(roll "+rolledAttackerValue+") won against the defenders "+defender+"(rolled "+rolledDefenderValue+") army,looting "+ goldDefender/4 +" gold";
                     incrementAttackedCounter(defender);
                 }else{
                     _base.updateUnitsCraftWar(attacker,attackerUnits/2);
@@ -259,6 +258,33 @@ public class CCraftWarComponent {
         return res;
     }
 
+    public String giveGold(String user1,String user2,int value) throws SQLException {
+        String res;
+        int goldUser1 = _base.selectGoldCraftWar(user1);
+        int goldUser2 = _base.selectGoldCraftWar(user2);
+        if(user1 == user2){
+            if(userRegistered(user1)&&userRegistered(user2)){
+                if(value<=100000){
+                    if(value <= goldUser1){
+                        _base.updateGoldCraftWar(user1,goldUser1-value);
+                        _base.updateGoldCraftWar(user2,goldUser2+value);
+                        res = user1+" donated "+value+" to "+user2;
+                    }else{
+                        res = "You dont have enough gold "+user1;
+                    }
+                }else{
+                    res = "No donations higher than 100k";
+                }
+            }else{
+                res = "Either "+user1+" or "+user2+" arent registered, check the spelling maybe";
+            }
+        }else{
+            res = "nice try MingLee";
+        }
+
+        return res;
+    }
+
     public String top10() throws SQLException {
         String res = null;
         HashMap<String,Integer> map = new HashMap();
@@ -279,6 +305,18 @@ public class CCraftWarComponent {
         return res;
     } //TODO
 
+    public String reset() throws SQLException{
+        ArrayList<String> list = _base.selectUsersCraftWar();
+        for(int i=0;i<list.size();i++){
+            System.out.println(list.get(i));
+            _base.updateGoldCraftWar(list.get(i),0);
+            _base.updateUnitsCraftWar(list.get(i),0);
+            _base.updateMineCraftWar(list.get(i),1);
+            _base.updateBarracksCraftWar(list.get(i),1);
+            System.out.println(this.getBaseStats(list.get(i)));
+        }
+        return "Reset done";
+    }
     private double defenderAddedForces(){
         Random random = new Random();
         double minRange = 0.2;

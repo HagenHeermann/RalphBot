@@ -23,13 +23,15 @@ public class RalphBot extends PircBot{
     private String id_token;
     private FileWriter log_writer;
     private BufferedWriter buffered_log_writer;
+    private String _channelName;
     private int log_id;
     private File log_file;
     private boolean quit=true;
     private boolean heist_online;
     private COnMessageHandler _onMessageHandler;
 
-    public RalphBot(int log_id,String oath){
+    public RalphBot(int log_id,String oath,String _channelName){
+        this._channelName = "#"+_channelName;
         this.id_token = oath;
         heist_online = false;
         this.log_id = log_id;
@@ -42,12 +44,12 @@ public class RalphBot extends PircBot{
             System.out.println("couldnt initalize db");
             e.printStackTrace();
         }
-        _onMessageHandler = new COnMessageHandler(_db,this);
+        _onMessageHandler = new COnMessageHandler(_db,this,_channelName);
     }
 
     public void connect_bot() throws IrcException, IOException {
         this.connect(twitch_server,twitch_port_number,id_token);
-        this.joinChannel("#ashwinitv");
+        this.joinChannel(_channelName);
     }
 
     public void onJoin(String channel, String sender, String login, String hostname){
@@ -57,8 +59,11 @@ public class RalphBot extends PircBot{
     public void onMessage(String channel, String sender,String login, String hostname, String message){
         String val = _onMessageHandler.handleMessage(message,sender);
         if(!(val==null)){
-            this.sendMessage("#ashwinitv",val);
+            this.sendMessage(_channelName,val);
         }
+        try{
+            Thread.sleep(30000);
+        }catch(InterruptedException e){}
     }
 
     private boolean isPlayerListet(String name){
@@ -110,7 +115,7 @@ public class RalphBot extends PircBot{
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-            this.sendMessage("#ashwinitv","!bankheist 50");
+            this.sendMessage(_channelName,"!bankheist 50");
 
         }
     }
