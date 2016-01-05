@@ -17,6 +17,7 @@ public class COnMessageHandler {
     private ArrayList<String> _activePlayers;
     private String _channelName;
 
+
     public COnMessageHandler(CDatabase _db,RalphBot _bot,String _channelName){
         this._channelName = _channelName;
         this.craftWar = new CCraftWarComponent(_db);

@@ -29,9 +29,11 @@ public class RalphBot extends PircBot{
     private boolean quit=true;
     private boolean heist_online;
     private COnMessageHandler _onMessageHandler;
+    private COutPutQ _q;
 
     public RalphBot(int log_id,String oath,String _channelName){
         this._channelName = "#"+_channelName;
+        _q = new COutPutQ(this,this._channelName);
         this.id_token = oath;
         heist_online = false;
         this.log_id = log_id;
@@ -53,17 +55,10 @@ public class RalphBot extends PircBot{
     }
 
     public void onJoin(String channel, String sender, String login, String hostname){
-        //this.sendMessage("ashwinitv","HeyGuys");
     }
 
     public void onMessage(String channel, String sender,String login, String hostname, String message){
-        String val = _onMessageHandler.handleMessage(message,sender);
-        if(!(val==null)){
-            this.sendMessage(_channelName,val);
-        }
-        try{
-            Thread.sleep(30000);
-        }catch(InterruptedException e){}
+        _q.enque(_onMessageHandler.handleMessage(message,sender));
     }
 
     private boolean isPlayerListet(String name){
