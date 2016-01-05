@@ -19,11 +19,12 @@ public class CMessagActivatorThread extends Thread{
      * case that the queue is empty it does nothing.
      */
     public void run(){
-        while(1<2){
+        System.out.println("Message activator thread started");
+        while(true){
             if(!_q.isQEmpty()){
                 _q.deque();
                 try {
-                    Thread.sleep(10000);
+                    Thread.sleep(5000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

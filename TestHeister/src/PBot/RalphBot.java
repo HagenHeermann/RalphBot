@@ -58,6 +58,7 @@ public class RalphBot extends PircBot{
     }
 
     public void onMessage(String channel, String sender,String login, String hostname, String message){
+        System.out.println("enqueing");
         _q.enque(_onMessageHandler.handleMessage(message,sender));
     }
 

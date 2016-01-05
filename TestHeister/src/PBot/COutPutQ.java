@@ -10,7 +10,7 @@ import java.util.Queue;
 public class COutPutQ {
 
     private RalphBot _ralph;
-    private ArrayList<String> _queueValues;
+    private volatile ArrayList<String> _queueValues;
     private CMessagActivatorThread _activator;
     private String _channelName;
 
@@ -19,7 +19,8 @@ public class COutPutQ {
         this._channelName = _channelName;
         _queueValues = new ArrayList<>();
         _activator = new CMessagActivatorThread(this);
-
+        _activator.start();
+        System.out.println("OutPutQ created");
     }
 
     /**
@@ -28,6 +29,7 @@ public class COutPutQ {
      */
     public void enque(String message){
         if(message!=null){
+            System.out.println("Message in q");
             _queueValues.add(message);
         }
     }
@@ -39,6 +41,7 @@ public class COutPutQ {
     public void deque(){
         _ralph.sendMessage(_channelName,_queueValues.get(0));
         _queueValues.remove(0);
+        System.out.println("Message dequed");
     }
 
     /**
