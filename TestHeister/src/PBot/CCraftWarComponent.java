@@ -182,6 +182,7 @@ public class CCraftWarComponent {
         String res;
         addPlayerToActive(attacker);
         addPlayerToActive(defender);
+
         if(_playerAttackedPerH.get(defender)<4){
             if(userRegistered(attacker)&&userRegistered(defender)){
                 int attackerUnits = _base.selectUnitsCraftWar(attacker);
@@ -189,34 +190,39 @@ public class CCraftWarComponent {
                 int defenderUnits = _base.selectUnitsCraftWar(defender);
                 int defenderDices=1;
 
-                if(attackerUnits>100){
-                    attackerDices = attackerUnits / 100;
-                }
-                if(defenderUnits>100){
-                    defenderDices = defenderUnits / 100;
-                }
+                if(!(attackerUnits==0)){
+                    if(attackerUnits>100){
+                        attackerDices = attackerUnits / 100;
+                    }
+                    if(defenderUnits>100){
+                        defenderDices = defenderUnits / 100;
+                    }
 
-                int rolledAttackerValue = 0;
-                int rolledDefenderValue = 0;
+                    int rolledAttackerValue = 0;
+                    int rolledDefenderValue = 0;
 
-                for(int i=0;i<attackerDices;i++ ){
-                    rolledAttackerValue = rolledAttackerValue + diceRoll();
-                }
-                for(int i=0;i<defenderDices;i++){
-                    rolledDefenderValue = rolledDefenderValue + diceRoll();
-                }
+                    for(int i=0;i<attackerDices;i++ ){
+                        rolledAttackerValue = rolledAttackerValue + diceRoll();
+                    }
+                    for(int i=0;i<defenderDices;i++){
+                        rolledDefenderValue = rolledDefenderValue + diceRoll();
+                    }
 
-                if(rolledAttackerValue>rolledDefenderValue){
-                    int goldDefender = _base.selectGoldCraftWar(defender);
-                    int goldAttacker = _base.selectGoldCraftWar(attacker);
-                    _base.updateGoldCraftWar(defender,3*(goldDefender/4));
-                    _base.updateGoldCraftWar(attacker,goldAttacker+goldDefender/4);
-                    res = "The attacker "+attacker+"(roll "+rolledAttackerValue+") won against the defenders "+defender+"(rolled "+rolledDefenderValue+") army,looting "+ goldDefender/4 +" gold";
-                    incrementAttackedCounter(defender);
+                    if(rolledAttackerValue>rolledDefenderValue){
+                        int goldDefender = _base.selectGoldCraftWar(defender);
+                        int goldAttacker = _base.selectGoldCraftWar(attacker);
+                        _base.updateGoldCraftWar(defender,3*(goldDefender/4));
+                        _base.updateGoldCraftWar(attacker,goldAttacker+goldDefender/4);
+                        res = "The attacker "+attacker+"(roll "+rolledAttackerValue+") won against the defenders "+defender+"(rolled "+rolledDefenderValue+") army,looting "+ goldDefender/4 +" gold";
+                        incrementAttackedCounter(defender);
+                    }else{
+                        _base.updateUnitsCraftWar(attacker,attackerUnits/2);
+                        res = "The Defender "+defender+"(roll "+rolledDefenderValue+")won and slaughtered the attackers "+attacker+"(roll "+rolledAttackerValue+") army";
+                    }
                 }else{
-                    _base.updateUnitsCraftWar(attacker,attackerUnits/2);
-                    res = "The Defender "+defender+"(roll "+rolledDefenderValue+")won and slaughtered the attackers "+attacker+"(roll "+rolledAttackerValue+") army";
+                    res = "No attacks with 0 Units allowed";
                 }
+
             }
             else{
                 res = "either attack or defender isn't registered";

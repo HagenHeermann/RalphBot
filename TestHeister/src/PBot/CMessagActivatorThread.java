@@ -24,7 +24,7 @@ public class CMessagActivatorThread extends Thread{
             if(!_q.isQEmpty()){
                 _q.deque();
                 try {
-                    Thread.sleep(5000);
+                    Thread.sleep(10000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
