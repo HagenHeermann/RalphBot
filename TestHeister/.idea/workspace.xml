@@ -42,21 +42,53 @@
         <entry file="file://$PROJECT_DIR$/src/PBot/COutPutQ.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
+              <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1427#1428#0" expanded="true" />
-                <element signature="e#1472#1473#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CCraftWarComponent.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CDatabase.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/PBot/CDatabase.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+              <folding>
+                <marker date="1451731826260" expanded="true" signature="995:1198" placeholder="CREATE TABLE..USERS..." />
+                <marker date="1451731826260" expanded="true" signature="1469:1703" placeholder="CREATE TABLE..CraftWar..." />
+                <marker date="1451731826260" expanded="true" signature="2188:2326" placeholder="INSERT INTO ..." />
+                <marker date="1451731826260" expanded="true" signature="2784:2810" placeholder="SELECT USERN..USERS..." />
+                <marker date="1451731826260" expanded="true" signature="3427:3485" placeholder="SELECT COUNT..USERS..." />
+                <marker date="1451731826260" expanded="true" signature="4008:4064" placeholder="SELECT WINS ..USERS..." />
+                <marker date="1451731826260" expanded="true" signature="4601:4658" placeholder="SELECT RIPS ..USERS..." />
+                <marker date="1451731826260" expanded="true" signature="5157:5225" placeholder="UPDATE USERS..." />
+                <marker date="1451731826260" expanded="true" signature="5642:5708" placeholder="UPDATE USERS..." />
+                <marker date="1451731826260" expanded="true" signature="6134:6200" placeholder="UPDATE USERS..." />
+                <marker date="1451731826260" expanded="true" signature="6579:6630" placeholder="DELETE from ..." />
+                <marker date="1451731826260" expanded="true" signature="7031:7137" placeholder="INSERT INTO ..." />
+                <marker date="1451731826260" expanded="true" signature="7583:7612" placeholder="SELECT USERN..CraftWar..." />
+                <marker date="1451731826260" expanded="true" signature="8223:8297" placeholder="SELECT GOLD ..CraftWar..." />
+                <marker date="1451731826260" expanded="true" signature="8826:8904" placeholder="SELECT BARRA..CraftWar..." />
+                <marker date="1451731826260" expanded="true" signature="9425:9499" placeholder="SELECT MINE ..CraftWar..." />
+                <marker date="1451731826260" expanded="true" signature="10034:10108" placeholder="SELECT UNITS..CraftWar..." />
+                <marker date="1451731826260" expanded="true" signature="10601:10684" placeholder="UPDATE Craft..." />
+                <marker date="1451731826260" expanded="true" signature="11109:11196" placeholder="UPDATE Craft..." />
+                <marker date="1451731826260" expanded="true" signature="11612:11695" placeholder="UPDATE Craft..." />
+                <marker date="1451731826260" expanded="true" signature="12113:12197" placeholder="UPDATE Craft..." />
+                <marker date="1451731826260" expanded="true" signature="12580:12634" placeholder="DELETE from ..." />
+                <marker date="1451731826260" expanded="true" signature="12879:12898" placeholder="DROP TABLE C..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CCraftWarComponent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PBot/CCraftWarComponent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.5041667">
-              <caret line="222" column="60" selection-start-line="222" selection-start-column="60" selection-end-line="222" selection-end-column="60" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="271" column="27" selection-start-line="271" selection-start-column="27" selection-end-line="271" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#updateValues#0;class#CCraftWarComponent#0" expanded="false" />
@@ -75,10 +107,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-              <folding>
-                <element signature="e#335#336#0" expanded="true" />
-                <element signature="e#363#364#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,9 +117,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -105,11 +132,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CraftWartMainTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CraftWartMainTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PBot/CraftWartMainTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.71834624">
+              <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -120,9 +147,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -155,14 +180,14 @@
         <option value="$PROJECT_DIR$/src/PBot/CStatisticsComponent.java" />
         <option value="$PROJECT_DIR$/src/PBot/CDatabase.java" />
         <option value="$PROJECT_DIR$/src/PBot/ConnectionSupervisorThread.java" />
-        <option value="$PROJECT_DIR$/src/PBot/CraftWartMainTest.java" />
         <option value="$PROJECT_DIR$/src/PBot/RalphBotMain.java" />
         <option value="$PROJECT_DIR$/src/PBot/COnMessageHandler.java" />
         <option value="$PROJECT_DIR$/src/PBot/CLoggingScreen.java" />
         <option value="$PROJECT_DIR$/src/PBot/RalphBot.java" />
-        <option value="$PROJECT_DIR$/src/PBot/COutPutQ.java" />
         <option value="$PROJECT_DIR$/src/PBot/CMessagActivatorThread.java" />
         <option value="$PROJECT_DIR$/src/PBot/CCraftWarComponent.java" />
+        <option value="$PROJECT_DIR$/src/PBot/COutPutQ.java" />
+        <option value="$PROJECT_DIR$/src/PBot/CraftWartMainTest.java" />
       </list>
     </option>
   </component>
@@ -201,6 +226,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -275,9 +302,7 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -295,7 +320,7 @@
     <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://C:/Users/Hagen/Desktop/ChatBot/TestHeister/src/PBot/RalphBotMain.java" />
     <property name="extract.method.default.visibility" value="private" />
   </component>
-  <component name="RunManager" selected="Application.RalphBotMain">
+  <component name="RunManager" selected="Application.CraftWartMainTest">
     <configuration default="false" name="testMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="testMain" />
@@ -644,8 +669,8 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.RalphBotMain" />
-        <item index="1" class="java.lang.String" itemvalue="Application.CraftWartMainTest" />
+        <item index="0" class="java.lang.String" itemvalue="Application.CraftWartMainTest" />
+        <item index="1" class="java.lang.String" itemvalue="Application.RalphBotMain" />
         <item index="2" class="java.lang.String" itemvalue="Application.quicktest" />
         <item index="3" class="java.lang.String" itemvalue="Application.CDatabase" />
         <item index="4" class="java.lang.String" itemvalue="Application.testMain" />
@@ -700,12 +725,15 @@
       <workItem from="1451856764978" duration="14116000" />
       <workItem from="1451987201630" duration="2205000" />
       <workItem from="1451989874825" duration="9507000" />
-      <workItem from="1452015128816" duration="11123000" />
+      <workItem from="1452015128816" duration="12639000" />
+      <workItem from="1452088338373" duration="2142000" />
+      <workItem from="1452185196273" duration="844000" />
+      <workItem from="1452290663412" duration="979000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="218045000" />
+    <option name="totallyTimeSpent" value="223526000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="0" width="1370" height="772" extended-state="0" />
@@ -718,7 +746,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.5957768" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.37405732" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3288889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36115214" sideWeight="0.5" order="0" side_tool="true" content_ui="combo" />
@@ -830,14 +858,6 @@
             <element signature="method#buildBarracks#0;class#CCraftWarComponent#0" expanded="false" />
             <element signature="method#buildUnits#0;class#CCraftWarComponent#0" expanded="false" />
             <element signature="method#attack#0;class#CCraftWarComponent#0" expanded="false" />
-            <element signature="method#newAttack#0;class#CCraftWarComponent#0" expanded="false" />
-            <element signature="method#registerUserToCraftWar#0;class#CCraftWarComponent#0" expanded="false" />
-            <element signature="method#userRegistered#0;class#CCraftWarComponent#0" expanded="false" />
-            <element signature="method#giveGold#0;class#CCraftWarComponent#0" expanded="false" />
-            <element signature="method#top10#0;class#CCraftWarComponent#0" expanded="false" />
-            <element signature="method#defenderAddedForces#0;class#CCraftWarComponent#0" expanded="false" />
-            <element signature="method#diceRoll#0;class#CCraftWarComponent#0" expanded="false" />
-            <element signature="method#attackerDefenderBalancing#0;class#CCraftWarComponent#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -854,16 +874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="93" column="60" selection-start-line="93" selection-start-column="60" selection-end-line="93" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#singleHeist#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#singleHeistFail#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#multiHeist#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#deltePlayer#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#statistics#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#isPlayerListet#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#round#0;class#CStatisticsComponent#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -899,9 +909,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -937,9 +945,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -975,9 +981,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1020,9 +1024,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="10" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1131,27 +1133,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PBot/CDatabase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/PBot/CStatisticsComponent.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="93" column="60" selection-start-line="93" selection-start-column="60" selection-end-line="93" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#singleHeist#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#singleHeistFail#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#multiHeist#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#deltePlayer#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#statistics#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#isPlayerListet#0;class#CStatisticsComponent#0" expanded="false" />
-            <element signature="method#round#0;class#CStatisticsComponent#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1167,7 +1152,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="13" selection-start-line="30" selection-start-column="13" selection-end-line="30" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1175,7 +1159,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="13" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1189,16 +1172,6 @@
             <element signature="method#heistEndedCase#0;class#COnMessageHandler#0" expanded="false" />
             <element signature="method#statisticsCall#0;class#COnMessageHandler#0" expanded="false" />
             <element signature="method#deleteCase#0;class#COnMessageHandler#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PBot/CLoggingScreen.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1228,21 +1201,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="22" selection-start-line="31" selection-start-column="22" selection-end-line="31" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PBot/COutPutQ.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1427#1428#0" expanded="true" />
-            <element signature="e#1472#1473#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1250,25 +1209,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="26" column="35" selection-start-line="26" selection-start-column="35" selection-end-line="26" selection-end-column="35" />
-          <folding>
-            <element signature="e#335#336#0" expanded="true" />
-            <element signature="e#363#364#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PBot/CraftWartMainTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="29" column="0" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PBot/CCraftWarComponent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5041667">
-          <caret line="222" column="60" selection-start-line="222" selection-start-column="60" selection-end-line="222" selection-end-column="60" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="271" column="27" selection-start-line="271" selection-start-column="27" selection-end-line="271" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#updateValues#0;class#CCraftWarComponent#0" expanded="false" />
@@ -1278,6 +1226,64 @@
             <element signature="method#buildUnits#0;class#CCraftWarComponent#0" expanded="false" />
             <element signature="method#attack#0;class#CCraftWarComponent#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PBot/CLoggingScreen.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PBot/CDatabase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+          <folding>
+            <marker date="1451731826260" expanded="true" signature="995:1198" placeholder="CREATE TABLE..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="1469:1703" placeholder="CREATE TABLE..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="2188:2326" placeholder="INSERT INTO ..." />
+            <marker date="1451731826260" expanded="true" signature="2784:2810" placeholder="SELECT USERN..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="3427:3485" placeholder="SELECT COUNT..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="4008:4064" placeholder="SELECT WINS ..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="4601:4658" placeholder="SELECT RIPS ..USERS..." />
+            <marker date="1451731826260" expanded="true" signature="5157:5225" placeholder="UPDATE USERS..." />
+            <marker date="1451731826260" expanded="true" signature="5642:5708" placeholder="UPDATE USERS..." />
+            <marker date="1451731826260" expanded="true" signature="6134:6200" placeholder="UPDATE USERS..." />
+            <marker date="1451731826260" expanded="true" signature="6579:6630" placeholder="DELETE from ..." />
+            <marker date="1451731826260" expanded="true" signature="7031:7137" placeholder="INSERT INTO ..." />
+            <marker date="1451731826260" expanded="true" signature="7583:7612" placeholder="SELECT USERN..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="8223:8297" placeholder="SELECT GOLD ..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="8826:8904" placeholder="SELECT BARRA..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="9425:9499" placeholder="SELECT MINE ..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="10034:10108" placeholder="SELECT UNITS..CraftWar..." />
+            <marker date="1451731826260" expanded="true" signature="10601:10684" placeholder="UPDATE Craft..." />
+            <marker date="1451731826260" expanded="true" signature="11109:11196" placeholder="UPDATE Craft..." />
+            <marker date="1451731826260" expanded="true" signature="11612:11695" placeholder="UPDATE Craft..." />
+            <marker date="1451731826260" expanded="true" signature="12113:12197" placeholder="UPDATE Craft..." />
+            <marker date="1451731826260" expanded="true" signature="12580:12634" placeholder="DELETE from ..." />
+            <marker date="1451731826260" expanded="true" signature="12879:12898" placeholder="DROP TABLE C..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PBot/COutPutQ.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PBot/CraftWartMainTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.71834624">
+          <caret line="24" column="57" selection-start-line="24" selection-start-column="57" selection-end-line="24" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>

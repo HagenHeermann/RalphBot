@@ -13,6 +13,7 @@ public class COutPutQ {
     private volatile ArrayList<String> _queueValues;
     private CMessagActivatorThread _activator;
     private String _channelName;
+    private Object _qLock;
 
     public COutPutQ(RalphBot _ralph,String _channelName){
         this._ralph = _ralph;
@@ -20,6 +21,7 @@ public class COutPutQ {
         _queueValues = new ArrayList<>();
         _activator = new CMessagActivatorThread(this);
         _activator.start();
+        _qLock = new Object();
         System.out.println("OutPutQ created");
     }
 
@@ -28,9 +30,11 @@ public class COutPutQ {
      * @param message
      */
     public void enque(String message){
-        if(message!=null){
-            System.out.println("Message in q");
-            _queueValues.add(message);
+        synchronized (this){
+            if(message!=null){
+                System.out.println("Message in q");
+                _queueValues.add(message);
+            }
         }
     }
 
@@ -39,9 +43,11 @@ public class COutPutQ {
      * CMessageActivatorThread object.
      */
     public void deque(){
-        _ralph.sendMessage(_channelName,_queueValues.get(0));
-        _queueValues.remove(0);
-        System.out.println("Message dequed");
+        synchronized (this){
+            _ralph.sendMessage(_channelName,_queueValues.get(0));
+            _queueValues.remove(0);
+            System.out.println("Message dequed");
+        }
     }
 
     /**
@@ -49,7 +55,9 @@ public class COutPutQ {
      * @return
      */
     public boolean isQEmpty(){
-        return _queueValues.isEmpty();
+        synchronized (this){
+            return _queueValues.isEmpty();
+        }
     }
 
 

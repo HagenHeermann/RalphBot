@@ -19,9 +19,9 @@ public class CraftWartMainTest {
             ArrayList<String> list = base.selectUsersCraftWar();
             for(int i=0;i<list.size();i++){
                 System.out.println(list.get(i));
-                base.updateGoldCraftWar(list.get(i),0);
-                base.updateUnitsCraftWar(list.get(i),0);
-                base.updateMineCraftWar(list.get(i),1);
+                base.updateGoldCraftWar(list.get(i),10000);
+                base.updateUnitsCraftWar(list.get(i),101);
+                base.updateMineCraftWar(list.get(i),10);
                 base.updateBarracksCraftWar(list.get(i),1);
                 System.out.println(comp.getBaseStats(list.get(i)));
             }
