@@ -8,10 +8,12 @@ import java.util.ArrayList;
 
 /**
  * Created by Hagen on 30.12.2015.
+ *
+ * Logging fomrat for this class is System.currentTimeMilis()+" Statistics: "+ text;
  */
 public class CStatisticsComponent {
 
-    private Logger log = RalphBotMain.log;
+    private static Logger log = RalphBotMain.log;
 
     /**
      *
@@ -26,7 +28,7 @@ public class CStatisticsComponent {
             int lastH = db.selectHEISTCOUNT(splitMessage[0]);
             db.updateWINS(lastW+1,splitMessage[0]);
             db.updateHEISTCOUNT(lastH+1,splitMessage[0]);
-            System.out.println("Win Heist update succesfull");
+            log.info(System.currentTimeMillis()+" Statistics: Wins for a user updated");
         }
     }
 
@@ -37,7 +39,7 @@ public class CStatisticsComponent {
             int lastH = _db.selectHEISTCOUNT(splitMessage[3]);
             _db.updateHEISTCOUNT(lastH+1,splitMessage[3]);
             _db.updateRIPS(lastF+1,splitMessage[3]);
-            System.out.println("Fail Heist update succesfull");
+            log.info(System.currentTimeMillis() + " Statistics: RIPs for a user updated");
         }
 
     }
@@ -51,15 +53,16 @@ public class CStatisticsComponent {
                 if(!splitMessage[i+1].contains("rip")){
                     int lastW = _db.selectWINS(splitMessage[i]);
                     _db.updateWINS(lastW+1,splitMessage[i]);
-                    System.out.println("Wins of a player updatet"+splitMessage[i]);
+                    log.info(System.currentTimeMillis() + " Statistics: Wins for a user updated");
                 }else{
                     int lastR = _db.selectRIPS(splitMessage[i]);
                     _db.updateRIPS(lastR+1,splitMessage[i]);
-                    System.out.println("Rips of a player updatet"+splitMessage[i]);
+                    log.info(System.currentTimeMillis() + " Statistics: RIPs for a user updated");
                 }
                 int lasH = _db.selectHEISTCOUNT(splitMessage[i]);
                 _db.updateHEISTCOUNT(lasH+1,splitMessage[i]);
                 System.out.println("Players heist count updatet"+splitMessage[i]);
+                log.info(System.currentTimeMillis() + " Statistics: heistcount for a user updated");
             }
         }
 
@@ -68,6 +71,7 @@ public class CStatisticsComponent {
     static void deltePlayer(String name,CDatabase _db) throws SQLException {
         if (isPlayerListet(name, _db)) {
             _db.deletePlayer(name);
+            log.info(System.currentTimeMillis() + " Statistics: User succesfully deleted");
         }
     }
 
@@ -92,6 +96,7 @@ public class CStatisticsComponent {
             res[1]="_";
             res[2]="_";
         }
+        log.info(System.currentTimeMillis() + " Statistics: Statistics for a user succesfully returned");
         return res;
     }
 

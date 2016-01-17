@@ -13,23 +13,7 @@ public class CraftWartMainTest {
 
         try {
             base.connectDB();
-            for(int i=0;i<100;i++){
-                //System.out.println(comp.diceRoll());
-            }
-            ArrayList<String> list = base.selectUsersCraftWar();
-            for(int i=0;i<list.size();i++){
-                System.out.println(list.get(i));
-                base.updateGoldCraftWar(list.get(i),10000);
-                base.updateUnitsCraftWar(list.get(i),101);
-                base.updateMineCraftWar(list.get(i),10);
-                base.updateBarracksCraftWar(list.get(i),1);
-                System.out.println(comp.getBaseStats(list.get(i)));
-            }
-
-
-
-
-
+            base.updateGoldCraftWar("voodoohood",100000);
         } catch (SQLException e) {
             e.printStackTrace();
         } catch (ClassNotFoundException e) {
