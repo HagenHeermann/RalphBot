@@ -1,5 +1,7 @@
 package PBot;
 
+import org.apache.logging.log4j.Logger;
+
 /**
  * This thread exists because some user started spamming bot commands and got my bot and me banned for 8 hours from
  * Tiwtch irc thanks again MingLee.
@@ -7,6 +9,7 @@ package PBot;
  */
 public class CMessagActivatorThread extends Thread{
 
+    private Logger log = RalphBotMain.log;
     private COutPutQ _q;
 
     public CMessagActivatorThread(COutPutQ _q){

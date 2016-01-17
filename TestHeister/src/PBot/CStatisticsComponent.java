@@ -1,4 +1,6 @@
 package PBot;
+import org.apache.logging.log4j.Logger;
+
 import java.sql.SQLException;
 import java.text.DecimalFormat;
 import java.text.ParseException;
@@ -8,6 +10,8 @@ import java.util.ArrayList;
  * Created by Hagen on 30.12.2015.
  */
 public class CStatisticsComponent {
+
+    private Logger log = RalphBotMain.log;
 
     /**
      *

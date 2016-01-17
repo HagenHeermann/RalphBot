@@ -1,5 +1,7 @@
 package PBot;
 
+import org.apache.logging.log4j.Logger;
+
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -10,6 +12,7 @@ import java.util.HashMap;
  */
 public class COnMessageHandler {
 
+    private Logger log = RalphBotMain.log;
     private CDatabase _db;
     private RalphBot _bot;
     private CCraftWarComponent craftWar;

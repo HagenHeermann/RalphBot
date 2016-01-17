@@ -1,5 +1,6 @@
 package PBot;
 
+import org.apache.logging.log4j.Logger;
 import org.jibble.pircbot.*;
 import java.io.BufferedWriter;
 import java.io.File;
@@ -30,6 +31,7 @@ public class RalphBot extends PircBot{
     private boolean heist_online;
     private COnMessageHandler _onMessageHandler;
     private COutPutQ _q;
+    private Logger log = RalphBotMain.log;
 
     public RalphBot(int log_id,String oath,String _channelName){
         this._channelName = "#"+_channelName;
@@ -125,4 +127,6 @@ public class RalphBot extends PircBot{
     public void craftWarUpdate(){_onMessageHandler.craftWarUpdate();}
 
     public void craftWarClear(){_onMessageHandler.craftWarClear();}
+
+
 }

@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import org.jibble.pircbot.IrcException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.IOException;
 
@@ -20,6 +22,7 @@ import java.io.IOException;
  * Created by Hagen on 07.12.2015.
  */
 public class RalphBotMain extends Application{
+    public static Logger log = LogManager.getLogger("corelog");
 
     public static void main(String[]args) throws Exception{
         launch(args);

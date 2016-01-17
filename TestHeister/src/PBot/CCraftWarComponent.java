@@ -1,5 +1,7 @@
 package PBot;
 
+import org.apache.logging.log4j.Logger;
+
 import java.sql.SQLException;
 import java.util.*;
 
@@ -21,6 +23,7 @@ import java.util.*;
  */
 public class CCraftWarComponent {
 
+    private Logger log = RalphBotMain.log;
     private CDatabase _base;
     private final int mineBaseCost = 100;
     private final int unitCost = 100;

@@ -1,6 +1,7 @@
 package PBot;
 
 import PBot.RalphBot;
+import org.apache.logging.log4j.Logger;
 import org.jibble.pircbot.IrcException;
 
 import java.io.IOException;
@@ -9,6 +10,8 @@ import java.io.IOException;
  * Created by Hagen on 08.12.2015.
  */
 public class ConnectionSupervisorThread extends Thread {
+
+    private Logger log = RalphBotMain.log;
     private RalphBot ralphBot;
     private volatile boolean active;
     private int _craftWarResetCounter;

@@ -1,5 +1,7 @@
 package PBot;
 
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.Queue;
 
@@ -9,6 +11,7 @@ import java.util.Queue;
  */
 public class COutPutQ {
 
+    private Logger log = RalphBotMain.log;
     private RalphBot _ralph;
     private volatile ArrayList<String> _queueValues;
     private CMessagActivatorThread _activator;

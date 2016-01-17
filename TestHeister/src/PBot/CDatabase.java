@@ -1,4 +1,6 @@
 package PBot;
+import org.apache.logging.log4j.Logger;
+
 import javax.swing.plaf.nimbus.State;
 import java.sql.*;
 import java.util.ArrayList;
@@ -10,9 +12,11 @@ import java.util.ArrayList;
  * USERS
  * USERNAME(STRING) / COUNTS(INT) / WINS(INT) / RIPS(INT)
  *
+ * Logging format for this class is System.currentTimeMillis() + " Database: "+ text
  */
 public class CDatabase {
 
+    private Logger log = RalphBotMain.log;
     private Connection _connection;
 
     /**
@@ -24,9 +28,9 @@ public class CDatabase {
         Connection c = null;
         Class.forName("org.sqlite.JDBC");
         c = DriverManager.getConnection("jdbc:sqlite:test.db");
-        System.out.println("Opened database successfully");
         _connection = c;
         _connection.setAutoCommit(false);
+        log.info(System.currentTimeMillis()+" Database: Database succesfully conected");
     }
 
     /**
@@ -43,7 +47,7 @@ public class CDatabase {
                 " RIPS        INT)";
         smt.executeUpdate(sql);
         smt.close();
-        System.out.println("Update successfull");
+        log.info(System.currentTimeMillis()+" Database: Creation of user tabel succesfull");
     }
 
     public void createTableCraftWar() throws SQLException{
@@ -57,7 +61,7 @@ public class CDatabase {
                 "UNITS INT NOT NULL)";
         stmt.executeUpdate(sql);
         stmt.close();
-        System.out.println("Update succesfull CraftWar");
+        log.info(System.currentTimeMillis()+" Database: Creation of CraftWar tabel succesfull");
     }
 
     /**
@@ -76,7 +80,7 @@ public class CDatabase {
         smt.execute(sql);
         smt.close();
         _connection.commit();
-
+        log.info(System.currentTimeMillis()+" Database: insertion into the user tabel succesfull");
     }
 
     /**
@@ -97,6 +101,7 @@ public class CDatabase {
         }
         resultSet.close();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: Array of users succesfully created");
         return users;
     }
 
@@ -116,6 +121,7 @@ public class CDatabase {
         res = resultSet.getInt("COUNTS");
         resultSet.close();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: Heistcount succesfully selected");
         return res;
     }
 
@@ -135,6 +141,7 @@ public class CDatabase {
         res = resultSet.getInt("WINS");
         resultSet.close();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: Wins succesfully selected");
         return res;
     }
 
@@ -154,6 +161,7 @@ public class CDatabase {
         res = resultSet.getInt("RIPS");
         resultSet.close();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: RIPs succesfully selected");
         return res;
     }
 
@@ -170,6 +178,7 @@ public class CDatabase {
         stmt.execute(sql);
         _connection.commit();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: Heistcount succesfully updated");
     }
 
     /**
@@ -185,6 +194,7 @@ public class CDatabase {
         stmt.execute(sql);
         _connection.commit();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: Wins succesfully updated");
     }
 
     /**
@@ -200,6 +210,7 @@ public class CDatabase {
         stmt.execute(sql);
         _connection.commit();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: RIPs succesfully updated");
     }
 
     /**
@@ -214,6 +225,8 @@ public class CDatabase {
         stmt.executeUpdate(sql);
         _connection.commit();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: Player deleted");
+
     }
 
     /**
@@ -228,6 +241,7 @@ public class CDatabase {
         stmt.execute(sql);
         stmt.close();
         _connection.commit();
+        log.info(System.currentTimeMillis()+" Database: Player added to CraftWar");
     }
 
     /**
@@ -248,6 +262,7 @@ public class CDatabase {
         }
         resultSet.close();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: Array of CraftWar players succesfully created");
         return users;
     }
     /**
@@ -266,6 +281,7 @@ public class CDatabase {
         res = resultSet.getInt("GOLD");
         resultSet.close();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: Gold succesfully selected");
         return res;
     }
 
@@ -285,6 +301,7 @@ public class CDatabase {
         res = resultSet.getInt("BARRACKS");
         resultSet.close();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: Barracks succesfully selected");
         return res;
     }
 
@@ -304,6 +321,7 @@ public class CDatabase {
         res = resultSet.getInt("MINE");
         resultSet.close();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: Mine level succesfully selected");
         return res;
     }
 
@@ -323,6 +341,7 @@ public class CDatabase {
         res = resultSet.getInt("UNITS");
         resultSet.close();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: Unit count succesfully selected");
         return res;
     }
 
@@ -339,6 +358,7 @@ public class CDatabase {
         stmt.execute(sql);
         _connection.commit();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: Gold succesfully updated");
     }
 
     /**
@@ -354,6 +374,7 @@ public class CDatabase {
         stmt.execute(sql);
         _connection.commit();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: Barracks succesfully updated");
     }
 
     /**
@@ -369,6 +390,7 @@ public class CDatabase {
         stmt.execute(sql);
         _connection.commit();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: Mine level succesfully updated");
     }
 
     /**
@@ -384,6 +406,7 @@ public class CDatabase {
         stmt.execute(sql);
         _connection.commit();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: Unit number succesfully updated");
     }
 
     /**
@@ -398,6 +421,7 @@ public class CDatabase {
         stmt.executeUpdate(sql);
         _connection.commit();
         stmt.close();
+        log.info(System.currentTimeMillis()+" Database: player succesfully deleted form Craft War table");
     }
 
     public void dropCraftWar() throws SQLException {
@@ -407,7 +431,7 @@ public class CDatabase {
         stmt.execute(sql);
         stmt.close();
         _connection.commit();
-
+        log.info(System.currentTimeMillis()+" Database: CraftWar table succesfully dropped");
     }
 
 }
