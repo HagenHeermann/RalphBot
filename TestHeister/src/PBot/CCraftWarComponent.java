@@ -20,6 +20,8 @@ import java.util.*;
  * -attack player
  *
  * Created by Hagen on 31.12.2015.
+ *
+ * Logging format for this class is System.currentTimeMilis() + " CraftWar: "+ text
  */
 public class CCraftWarComponent {
 
@@ -36,6 +38,7 @@ public class CCraftWarComponent {
         this._base = base;
         this._activePlayers = new ArrayList<>();
         this._playerAttackedPerH = new HashMap<>();
+        log.info(System.currentTimeMillis()+" CraftWar: CraftWar component created");
     }
 
     public void updateValues() throws SQLException {
@@ -45,6 +48,7 @@ public class CCraftWarComponent {
             int madeGold = 5 * minelevel;
             _base.updateGoldCraftWar(users.get(i),_base.selectGoldCraftWar(users.get(i))+madeGold);
         }
+        log.info(System.currentTimeMillis()+" CraftWar: Gold values of the players updated relative to their mine level");
     }
 
     public String getBaseStats(String username) throws SQLException {
@@ -56,9 +60,11 @@ public class CCraftWarComponent {
             if(_base.selectBarracksCraftWar(username)==0){
                 String barracksBuild = "Barracks: No Barracks";
                 res = "Base stats for "+username+" are "+mineLevel+" "+goldAmount+" "+unitAmount+" "+barracksBuild;
+                log.info(System.currentTimeMillis()+" CraftWar: Returned the base stats for a player with barracks");
             }else{
                 String barracksBuild = "Barracks: Available";
                 res = "Base stats for "+username+" are "+mineLevel+" "+goldAmount+" "+unitAmount+" "+barracksBuild;
+                log.info(System.currentTimeMillis()+" CraftWar: Returned the base stats for a player with no barracks");
             }
         }else{
             res = "Player isnt registered";
@@ -76,11 +82,14 @@ public class CCraftWarComponent {
                 _base.updateMineCraftWar(username,mineLevel+1);
                 _base.updateGoldCraftWar(username,usersGold-(mineLevel*100));
                 res = "Mine of player "+username+" has been upgraded to level "+(mineLevel+1);
+                log.info(System.currentTimeMillis()+" CraftWar: Mine for a player succesfully upgraded and returned");
             }else{
                 res = "Not enough Gold "+username;
+                log.info(System.currentTimeMillis()+" CraftWar: Mine for a player not upgraded because he has not enough gold");
             }
         }else{
             res = "Player isnt registered";
+            log.info(System.currentTimeMillis()+" CraftWar: Not registered user tryed to upgrade his mine");
         }
 
         return res;
@@ -96,14 +105,18 @@ public class CCraftWarComponent {
                     _base.updateBarracksCraftWar(username,1);
                     _base.updateGoldCraftWar(username,usersGold-barracksCost);
                     res = "Barracks build "+username;
+                    log.info(System.currentTimeMillis()+" CraftWar: Barracks were build for a player");
                 }else{
                     res = "You dont have enough gold to build a barrack "+username;
+                    log.info(System.currentTimeMillis()+" CraftWar: User tryed to build Barracks but doesnt have enough gold");
                 }
             }else{
                 res = "You already have a barrack "+username;
+                log.info(System.currentTimeMillis()+" CraftWar: User tryed to build Barracks when he already had them");
             }
         }else{
             res = "Player isnt registered";
+            log.info(System.currentTimeMillis()+" CraftWar: Non registered user tryed to acces buildBarracks method");
         }
 
         return res;
@@ -121,19 +134,24 @@ public class CCraftWarComponent {
                         int gold = _base.selectGoldCraftWar(username);
                         _base.updateGoldCraftWar(username,gold-(100*count));
                         res = "You now have "+(usersUnits+count)+" Units "+username;
+                        log.info(System.currentTimeMillis()+" CraftWar: Player build sucessfully units");
                     }
                     else{
                         res = "You dont have enough gold to build those units "+username;
+                        log.info(System.currentTimeMillis()+" CraftWar: User tryed to build units but hasnt enough gold");
                     }
                 }else{
                     res = "Player isnt registered";
+                    log.info(System.currentTimeMillis()+" CraftWar: Non registered User tryed to acces buildUnits method");
                 }
             }
             else{
                 res = "No Barracks in this base";
+                log.info(System.currentTimeMillis()+" CraftWar: Player tryed to build Units without Barracks");
             }
         }else{
             res = "Sry no more than 1000 Units at a time";
+            log.info(System.currentTimeMillis()+" CraftWar: Player tryed to build more than 1000 Units");
         }
 
         return res;
@@ -218,25 +236,27 @@ public class CCraftWarComponent {
                         _base.updateGoldCraftWar(attacker,goldAttacker+goldDefender/4);
                         res = "The attacker "+attacker+"(roll "+rolledAttackerValue+") won against the defenders "+defender+"(rolled "+rolledDefenderValue+") army,looting "+ goldDefender/4 +" gold";
                         incrementAttackedCounter(defender);
+                        log.info(System.currentTimeMillis()+" CraftWar: Player attacked another Player and won");
                     }else{
                         _base.updateUnitsCraftWar(attacker,attackerUnits/2);
                         res = "The Defender "+defender+"(roll "+rolledDefenderValue+")won and slaughtered the attackers "+attacker+"(roll "+rolledAttackerValue+") army";
+                        log.info(System.currentTimeMillis()+" CraftWar: Player attacked another Player and lost");
                     }
                 }else{
                     res = "No attacks with 0 Units allowed";
+                    log.info(System.currentTimeMillis()+" CraftWar: Player tryed to attack with 0 Units");
                 }
 
             }
             else{
                 res = "either attack or defender isn't registered";
+                log.info(System.currentTimeMillis()+" CraftWar: User tryed to attack a non registered User or isnt registered");
             }
         }
         else{
             res = "Defender was attacked 4 times already this hour";
+            log.info(System.currentTimeMillis()+" CraftWar: Player tryed to attack a player who was already attacked 4 times in an hour");
         }
-
-
-
 
         return res;
     }
@@ -245,9 +265,11 @@ public class CCraftWarComponent {
         String res;
         if(userRegistered(username)){
             res = "User already registered";
+            log.info(System.currentTimeMillis()+" CraftWar: Tryed to add a user who is already registered");
         }else{
             _base.createPlayerCraftWar(username);
             res = "User "+username+" succesfully added to the player list";
+            log.info(System.currentTimeMillis()+" CraftWar: Registered a user to the CraftWar system");
         }
         return res;
     }
@@ -259,6 +281,7 @@ public class CCraftWarComponent {
             for(int i=0;i<users.size();i++){
                 if(users.get(i).contains(username)){
                     res = true;
+                    log.info(System.currentTimeMillis()+" CraftWar: Asked user is registered");
                 }
             }
         } catch (SQLException e) {
@@ -278,19 +301,23 @@ public class CCraftWarComponent {
                         _base.updateGoldCraftWar(user1,goldUser1-value);
                         _base.updateGoldCraftWar(user2,goldUser2+value);
                         res = user1+" donated "+value+" to "+user2;
+                        log.info(System.currentTimeMillis()+" CraftWar: Player donated gold to another Player");
                     }else{
                         res = "You dont have enough gold "+user1;
+                        log.info(System.currentTimeMillis()+" CraftWar: Player tryed to donate more money than he has to another Player");
                     }
                 }else{
                     res = "No donations higher than 100k";
+                    log.info(System.currentTimeMillis()+" CraftWar: Player tryed to donate mor than 100k to another Player");
                 }
             }else{
                 res = "Either "+user1+" or "+user2+" arent registered, check the spelling maybe";
+                log.info(System.currentTimeMillis()+" CraftWar: User tryed to donate to another user but either one or both isnt registered");
             }
         }else{
             res = "nice try MingLee";
+            log.info(System.currentTimeMillis()+" CraftWar: User tryed to donate to himself");
         }
-
         return res;
     }
 
@@ -324,6 +351,7 @@ public class CCraftWarComponent {
             _base.updateBarracksCraftWar(list.get(i),1);
             System.out.println(this.getBaseStats(list.get(i)));
         }
+        log.info(System.currentTimeMillis()+" CraftWar: The DB was cleaned");
         return "Reset done";
     }
     private double defenderAddedForces(){
